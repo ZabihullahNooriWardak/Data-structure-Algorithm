@@ -12,24 +12,24 @@ class Stack {
         this.length = 0;
     }
     peek() {
-
+        return this.top;
     }
     push(value) {
         let node = new Node(value);
         if (!this.top) {
             this.bottom = node;
-            this.top= this.bottom;
+            this.top = this.bottom;
             this.length++;
             return this.top;
         }
         let currentNode = this.bottom;
-        let counter =1;
-        while (counter<this.length) {
+        let counter = 1;
+        while (counter < this.length) {
             currentNode = currentNode.next;
             counter++;
         }
-        currentNode.next =node;
-        this.top=currentNode.next;
+        currentNode.next = node;
+        this.top = currentNode.next;
         this.length++;
         return this.top;
     }
@@ -37,7 +37,11 @@ class Stack {
 
     }
     isEmpty() {
-
+        if (this.length === 0) {
+            return true;
+        }else {
+            return false;
+        }
     }
 }
 
