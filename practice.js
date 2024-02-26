@@ -34,12 +34,29 @@ class Stack {
         return this.top;
     }
     pop() {
-
+        if (this.length === 0) {
+            return "nothing to pop";
+        }
+        if (this.length === 1) {
+            this.bottom = null;
+            this.length--;
+            return;
+        }
+        let counter = 1;
+        let currentNode = this.bottom;
+        while (counter < this.length - 1) {
+            currentNode = currentNode.next;
+            counter++;
+        }
+        currentNode.next = null;
+        this.top = currentNode;
+        this.length--;
+        return currentNode;
     }
     isEmpty() {
         if (this.length === 0) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
@@ -50,5 +67,8 @@ let stack = new Stack();
 stack.push(2);
 stack.push(3);
 stack.push(4);
-
+stack.pop();
+stack.pop();
+stack.pop();
+console.log(stack.isEmpty());
 console.log(stack);
