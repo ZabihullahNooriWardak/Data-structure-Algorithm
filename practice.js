@@ -40,7 +40,7 @@ class Queue {
         this.length--;
     }
     isEmpty() {
-        this.length === 0 ? true : false;
+       return this.length === 0 ? true : false;
     }
 }
 
