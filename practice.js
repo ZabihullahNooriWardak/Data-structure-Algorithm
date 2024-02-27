@@ -22,14 +22,9 @@ class Stack {
             this.length++;
             return this.top;
         }
-        let currentNode = this.bottom;
-        let counter = 1;
-        while (counter < this.length) {
-            currentNode = currentNode.next;
-            counter++;
-        }
-        currentNode.next = node;
-        this.top = currentNode.next;
+        let pointerToTop = this.top;
+        pointerToTop.next = node;
+        this.top = node;
         this.length++;
         return this.top;
     }
@@ -39,7 +34,7 @@ class Stack {
         }
         if (this.length === 1) {
             this.bottom = null;
-            this.top=this.bottom;
+            this.top = this.bottom;
             this.length--;
             return;
         }
@@ -65,32 +60,11 @@ class Stack {
 
 
 let stack = new Stack();
+stack.push("zabih")
+stack.push("ali")
+stack.pop()
+stack.pop()
+console.log(stack);
 
 
 
-
-
-//some of the chat gpt code : 
-
-// push(value) {
-//     let node = new Node(value);
-//     if (!this.top) {
-//         this.bottom = node;
-//         this.top = this.bottom;
-//     } else {
-//         this.top.next = node;
-//         this.top = node;
-//     }
-//     this.length++;
-//     return this.top;
-// }
-
-// toArray() {
-//     let result = [];
-//     let currentNode = this.bottom;
-//     while (currentNode) {
-//         result.push(currentNode.value);
-//         currentNode = currentNode.next;
-//     }
-//     return result;
-// }
