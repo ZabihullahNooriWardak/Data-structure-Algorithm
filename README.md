@@ -118,7 +118,7 @@ If you like the project give this a star ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank ZTM for hands on course on DSA 
+I would like to thank ZTM espicially andrei for hands on course on DSA 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
