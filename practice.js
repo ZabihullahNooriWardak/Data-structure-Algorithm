@@ -20,10 +20,9 @@ class Queue {
             this.first = newNode;
             this.last = newNode;
         } else {
-            let pointerToFirst = this.first;
-            this.first = newNode;
-            this.first.next = pointerToFirst;
-            this.last = pointerToFirst;
+            let pointerToLast = this.last;
+            pointerToLast.next=newNode;
+            this.last = newNode;
         }
         this.length++;
     }
@@ -49,7 +48,7 @@ const myQueue = new Queue();
 
 myQueue.enqueue(" Joy");
 myQueue.enqueue("ali");
-myQueue.enqueue(" max");
+myQueue.enqueue("zabih")
 myQueue.dequeue();
 myQueue.dequeue();
 console.log(myQueue);
