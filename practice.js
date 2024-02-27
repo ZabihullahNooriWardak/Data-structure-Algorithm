@@ -65,4 +65,4 @@ class Stack {
 
 
 let stack = new Stack();
-console.log(stack.push(1))
+
