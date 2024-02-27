@@ -3,7 +3,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[DSA\] ](#-dsa-)
+- [📖 DSA ](#-dsa-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -21,7 +21,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [DSA] <a name="about-project"></a>
+# 📖 DSA <a name="about-project"></a>
 This repository is designed for hands-on practice with Data Structures and Algorithms using javascript
 
 **[Data-structure And Algorithm ]** is a Repository for hands on pratice with most used data structures and algorithms
