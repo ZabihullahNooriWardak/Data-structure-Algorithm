@@ -66,3 +66,31 @@ class Stack {
 
 let stack = new Stack();
 
+
+
+
+
+//some of the chat gpt code : 
+
+// push(value) {
+//     let node = new Node(value);
+//     if (!this.top) {
+//         this.bottom = node;
+//         this.top = this.bottom;
+//     } else {
+//         this.top.next = node;
+//         this.top = node;
+//     }
+//     this.length++;
+//     return this.top;
+// }
+
+// toArray() {
+//     let result = [];
+//     let currentNode = this.bottom;
+//     while (currentNode) {
+//         result.push(currentNode.value);
+//         currentNode = currentNode.next;
+//     }
+//     return result;
+// }
