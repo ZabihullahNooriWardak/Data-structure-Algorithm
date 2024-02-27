@@ -16,7 +16,7 @@ class Stack {
     }
     push(value) {
         let node = new Node(value);
-        if (!this.top) {
+        if (!this.bottom) {
             this.bottom = node;
             this.top = this.bottom;
             this.length++;
@@ -39,6 +39,7 @@ class Stack {
         }
         if (this.length === 1) {
             this.bottom = null;
+            this.top=this.bottom;
             this.length--;
             return;
         }
@@ -64,11 +65,4 @@ class Stack {
 
 
 let stack = new Stack();
-stack.push(2);
-stack.push(3);
-stack.push(4);
-stack.pop();
-stack.pop();
-stack.pop();
-console.log(stack.isEmpty());
-console.log(stack);
+
