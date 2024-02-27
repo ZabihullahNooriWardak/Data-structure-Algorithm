@@ -1,34 +1,28 @@
+class Node {
+    constructor(value) {
+      this.value = value;
+      this.next = null;
+    }
+  }
 
-class Stack {
-    constructor () {
-         this.array_for_stack = [];
+  class Queue {
+    constructor() {
+      this.first = null;
+      this.last = null;
+      this.length = 0;
     }
     peek() {
-        return this.array_for_stack[this.array_for_stack.length-1];
     }
-    push(value) {
-     this.array_for_stack.push(value)
-        return this.array_for_stack[this.array_for_stack.length-1];
+    enqueue(value) {
     }
-    pop() {  
-    return  this.array_for_stack.pop();
+    dequeue() {
     }
-    isEmpty() {
-        if (this.array_for_stack.length === 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-}
+    //isEmpty;
+  }
 
+  const myQueue = new Queue();
 
-let stack = new Stack();
-stack.push("zabih")
-stack.push("ali")
-stack.pop();
-console.log(stack.pop());
-console.log(stack);
-
-
-
+  //Joy
+  //Matt
+  //Pavel
+  //Samir
