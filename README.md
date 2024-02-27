@@ -41,8 +41,8 @@ This repository is designed for hands-on practice with Data Structures and Algor
 
 ### Key Features <a name="key-features"></a>
 
-- **[Easy to understand]**
-- **[comprehensive]**
+- **Easy to understand**
+- **comprehensive source for learning**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -54,8 +54,7 @@ This repository is designed for hands-on practice with Data Structures and Algor
 
 In order to run this project you need:
 
-** browser
-** IDE 
+ browser & IDE 
 
 ### Setup
 
