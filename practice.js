@@ -1,57 +1,45 @@
 class Node {
-    constructor (value) {
-        this.value = value;
-        this.next = null;
+    constructor(value) {
+      this.left = null;
+      this.right = null;
+      this.value = value;
     }
-}
-
-class Queue {
-    constructor () {
-        this.first = null;
-        this.last = null;
-        this.length = 0;
+  }
+  
+  class BinarySearchTree {
+    constructor() {
+      this.root = null;
     }
-    peek() {
-        return this.first;
+    insert(value) {
+      
     }
-    enqueue(value) {
-        let newNode = new Node(value)
-        if (this.length === 0) {
-            this.first = newNode;
-            this.last = newNode;
-        } else {
-            let pointerToLast = this.last;
-            pointerToLast.next=newNode;
-            this.last = newNode;
-        }
-        this.length++;
+    lookup(value) {
+      
     }
-    dequeue() {
-        if (this.length === 0) {
-            return "nothing to dequeu";
-        }
-        if (this.length === 1) {
-            this.first = null;
-            this.last = this.first;
-            return;
-        }
-        let pointerToFirst = this.first;
-        this.first = pointerToFirst.next;
-        this.length--;
+  
+    remove(value) {
+      
     }
-    isEmpty() {
-       return this.length === 0 ? true : false;
-    }
-}
-
-const myQueue = new Queue();
-
-myQueue.enqueue(" Joy");
-myQueue.enqueue("ali");
-myQueue.enqueue("zabih")
-myQueue.dequeue();
-myQueue.dequeue();
-console.log(myQueue);
-//Matt
-//Pavel
-//Samir
+  }
+  
+  const tree = new BinarySearchTree();
+  tree.insert(9);
+  tree.insert(4);
+  tree.insert(6);
+  tree.insert(20);
+  tree.insert(170);
+  tree.insert(15);
+  tree.insert(1);
+  tree.remove(170);
+  JSON.stringify(traverse(tree.root));
+  console.log(tree.lookup(20));
+  //     9
+  //  4     20
+  //1  6  15  170
+  
+  function traverse(node) {
+    const tree = { value: node.value };
+    tree.left = node.left === null ? null : traverse(node.left);
+    tree.right = node.right === null ? null : traverse(node.right);
+    return tree;
+  }
