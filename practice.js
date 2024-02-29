@@ -27,7 +27,7 @@ class BinarySearchTree {
         } else {
           //we should move the right side of the tree or the branch of the  tree .
           if (!currentNode.right) {
-            currentNode.right = value;
+            currentNode.right = newNode;
             return;
           }
           currentNode=currentNode.right;
@@ -52,7 +52,6 @@ tree.insert(20);
 tree.insert(170);
 tree.insert(15);
 tree.insert(1);
-tree.remove(170);
 console.log(tree);
 // JSON.stringify(traverse(tree.root));
 // console.log(tree.lookup(20));
