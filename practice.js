@@ -36,6 +36,22 @@ class BinarySearchTree {
     }
   }
   lookup(value) {
+     let currentNode = this.root;
+     while(true){
+      if(value===currentNode.value){
+        return currentNode;
+      }else{
+        if(value<currentNode.value){
+          currentNode=currentNode.left;
+        }else if(value >currentNode.value){
+          currentNode=currentNode.right;
+        } else if(currentNode.value === value){
+          return currentNode;
+        }else if(currentNode.value==null){
+          return "Your value can't be found in this tree😁"
+        }
+      }
+     }
 
   }
 
