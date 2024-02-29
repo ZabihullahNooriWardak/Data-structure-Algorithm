@@ -15,8 +15,8 @@ class BinarySearchTree {
     if (this.root === null) {
       this.root = newNode;
     } else {
+      let currentNode = this.root;
       while (true) {
-        let currentNode = this.root;
         if (value < currentNode.value) {
           //we should go to the left side of the tree  or branch of the tree .
           if (!currentNode.left) {
@@ -26,14 +26,11 @@ class BinarySearchTree {
           currentNode = currentNode.left;
         } else {
           //we should move the right side of the tree or the branch of the  tree .
-          if (value > currentNode.value) {
-            if (!currentNode.right) {
-              currentNode.right = value;
-              return;
-            }
-            currentNode=currentNode.right;
+          if (!currentNode.right) {
+            currentNode.right = value;
+            return;
           }
-
+          currentNode=currentNode.right;
         }
       }
     }
@@ -56,8 +53,9 @@ tree.insert(170);
 tree.insert(15);
 tree.insert(1);
 tree.remove(170);
-JSON.stringify(traverse(tree.root));
-console.log(tree.lookup(20));
+console.log(tree);
+// JSON.stringify(traverse(tree.root));
+// console.log(tree.lookup(20));
 //     9
 //  4     20
 //1  6  15  170
