@@ -38,6 +38,9 @@ class BinarySearchTree {
   lookup(value) {
      let currentNode = this.root;
      while(true){
+      if(currentNode==null){
+        return "Your value can't be found in the tree😁"
+      }
       if(value===currentNode.value){
         return currentNode;
       }else{
@@ -47,9 +50,7 @@ class BinarySearchTree {
           currentNode=currentNode.right;
         } else if(currentNode.value === value){
           return currentNode;
-        }else if(currentNode.value==null){
-          return "Your value can't be found in this tree😁"
-        }
+        } 
       }
      }
 
@@ -69,6 +70,7 @@ tree.insert(170);
 tree.insert(15);
 tree.insert(1);
 console.log(tree);
+console.log(tree.lookup(22))
 // JSON.stringify(traverse(tree.root));
 // console.log(tree.lookup(20));
 //     9
