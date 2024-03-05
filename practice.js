@@ -6,6 +6,11 @@ function findFactorialRecursive(number) {
 }
 
 function findFactorialIterative(number) {
-  //code here
+  let answer=1;
+ for(let i=number;i>0;i--){
+   answer=answer*i;
+ }
   return answer;
 }
+
+console.log(findFactorialIterative(3));
