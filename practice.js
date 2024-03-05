@@ -1,8 +1,10 @@
 // Write two functions that finds the factorial of any number. One should use recursive, the other should just use a for loop
 
 function findFactorialRecursive(number) {
-  //code here
-  return answer;
+ if(number===1){
+ return number;
+ }
+  return number*findFactorialRecursive(number-1);
 }
 
 function findFactorialIterative(number) {
@@ -13,4 +15,9 @@ function findFactorialIterative(number) {
   return answer;
 }
 
-console.log(findFactorialIterative(3));
+console.log(findFactorialRecursive(8));
+console.log(findFactorialIterative(8));
+
+
+
+
