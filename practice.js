@@ -7,6 +7,7 @@
 
 
 function fibonacciIterative(n) {
+
   let firstIndex = 0;
   let secondIndex = 1;
   if (n === 0) {
@@ -14,7 +15,7 @@ function fibonacciIterative(n) {
   } else if (n === 1) {
     return 1;
   } else {
-    let forReturn
+    let forReturn;
     for (let i = 2; i <= n; i++) {
       forReturn = firstIndex + secondIndex;
       firstIndex = secondIndex;
@@ -27,5 +28,8 @@ console.log(fibonacciIterative(7));
 
 
 function fibonacciRecursive(n) {
-
+if(n<2){
+  return n;
+}
+return fibonacciRecursive(n-2)+fibonacciRecursive(n-1);
 }
