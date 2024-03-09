@@ -5,7 +5,7 @@
 
 //For example: fibonacciRecursive(6) should return 8
 
-
+//first solution By me
 function fibonacciIterative(n) {
 
   let firstIndex = 0;
@@ -24,9 +24,17 @@ function fibonacciIterative(n) {
     return forReturn;
   }
 }
-console.log(fibonacciIterative(7));
 
+// second solution using teacher method
+function fibonacciIterative(n){
+  let arr = [0, 1];
+  for (let i = 2; i < n + 1; i++){
+    arr.push(arr[i - 2] + arr[i -1]);
+  }
+ return arr[n];
+}
 
+// third solution using teacher solution
 function fibonacciRecursive(n) {
 if(n<2){
   return n;
