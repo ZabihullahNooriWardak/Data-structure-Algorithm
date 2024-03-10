@@ -60,13 +60,17 @@ class BinarySearchTree {
   ـlookUpTwo(node, value) {
     if (value === node.value) {
       return value
+    } 
+    //if it reaches after the leaf node 
+    if(!node){
+      return "the value can not found in this tree"
     }
     if (value < node.value) {
-      change = node.left.value;
-      ـlookUpTwo(change,value)
+      node2 = node.left.value;
+      ـlookUpTwo(node2,value)
     } else if (value > node.value) {
-      value = node.right.value;
-      lookUpTwo(value)
+      node2 = node.right.value;
+      lookUpTwo(node2,value)
     }
   }
 
