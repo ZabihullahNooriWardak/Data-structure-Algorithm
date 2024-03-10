@@ -6,7 +6,7 @@
 - [📖 DSA ](#-dsa-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
-    - [Key Features ](#key-features-)
+  - [Key Features ](#key-features-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -39,7 +39,7 @@ This repository is designed for hands-on practice with Data Structures and Algor
 
 <!-- Features -->
 
-### Key Features <a name="key-features"></a>
+## Key Features <a name="key-features"></a>
 
 - **Easy to understand**
 - **comprehensive source for learning**
