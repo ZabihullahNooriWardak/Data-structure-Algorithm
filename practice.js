@@ -30,30 +30,44 @@ class BinarySearchTree {
             currentNode.right = newNode;
             return;
           }
-          currentNode=currentNode.right;
+          currentNode = currentNode.right;
         }
       }
     }
   }
   lookup(value) {
-     let currentNode = this.root;
-     while(true){
-      if(currentNode==null){
+    let currentNode = this.root;
+    while (true) {
+      if (currentNode == null) {
         return "Your value can't be found in the tree😁"
       }
-      if(value===currentNode.value){
+      if (value === currentNode.value) {
         return currentNode;
-      }else{
-        if(value<currentNode.value){
-          currentNode=currentNode.left;
-        }else if(value >currentNode.value){
-          currentNode=currentNode.right;
-        } else if(currentNode.value === value){
+      } else {
+        if (value < currentNode.value) {
+          currentNode = currentNode.left;
+        } else if (value > currentNode.value) {
+          currentNode = currentNode.right;
+        } else if (currentNode.value === value) {
           return currentNode;
-        } 
+        }
       }
-     }
+    }
 
+  }
+
+  //look up using recursion
+  ـlookUpTwo(node, value) {
+    if (value === node.value) {
+      return value
+    }
+    if (value < node.value) {
+      change = node.left.value;
+      ـlookUpTwo(change,value)
+    } else if (value > node.value) {
+      value = node.right.value;
+      lookUpTwo(value)
+    }
   }
 
   remove(value) {
@@ -143,6 +157,7 @@ tree.insert(20);
 tree.insert(170);
 tree.insert(15);
 tree.insert(1);
+tree.lookup(3)
 console.log(tree);
 console.log(tree.lookup(22))
 // JSON.stringify(traverse(tree.root));
