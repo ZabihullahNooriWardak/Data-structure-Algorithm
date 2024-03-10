@@ -73,10 +73,10 @@ class BinarySearchTree {
 
     if (value < node.value) {
       node = node.left;
-      this.lookUpTwo(node, value)
+      return this.lookUpTwo(node, value)
     } else if (value > node.value) {
       node = node.right;
-      this.lookUpTwo(node, value)
+      return this.lookUpTwo(node, value)
     }
   }
 
