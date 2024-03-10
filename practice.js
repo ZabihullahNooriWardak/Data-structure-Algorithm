@@ -57,7 +57,7 @@ class BinarySearchTree {
   }
 
   search(value) {
-    this.lookUpTwo(this.root, value)
+    return this.lookUpTwo(this.root, value)
   }
   //look up using recursion
 
