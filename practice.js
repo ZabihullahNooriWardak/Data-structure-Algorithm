@@ -56,12 +56,16 @@ class BinarySearchTree {
 
   }
 
+  search(value){
+_lookUpTwo(this.root,value);
+  }
   //look up using recursion
   ـlookUpTwo(node, value) {
+    // this is the base case 
     if (value === node.value) {
       return value
     } 
-    //if it reaches after the leaf node 
+    //if it reaches after the leaf node (base case as well.)
     if(!node){
       return "the value can not found in this tree"
     }
