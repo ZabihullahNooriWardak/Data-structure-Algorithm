@@ -56,25 +56,27 @@ class BinarySearchTree {
 
   }
 
-  search(value){
-_lookUpTwo(this.root,value);
+  search(value) {
+    this.lookUpTwo(this.root, value)
   }
   //look up using recursion
-  ـlookUpTwo(node, value) {
+
+  lookUpTwo(node, value) {
+    //if it reaches after the leaf node (base case as well.)
+    if (!node) {
+      return "the value can not found in this tree"
+    }
     // this is the base case 
     if (value === node.value) {
       return value
-    } 
-    //if it reaches after the leaf node (base case as well.)
-    if(!node){
-      return "the value can not found in this tree"
     }
+
     if (value < node.value) {
-      node2 = node.left.value;
-      ـlookUpTwo(node2,value)
+      node = node.left;
+      this.lookUpTwo(node, value)
     } else if (value > node.value) {
-      node2 = node.right.value;
-      lookUpTwo(node2,value)
+      node = node.right;
+      this.lookUpTwo(node, value)
     }
   }
 
@@ -166,8 +168,9 @@ tree.insert(170);
 tree.insert(15);
 tree.insert(1);
 tree.lookup(3)
-console.log(tree);
-console.log(tree.lookup(22))
+
+console.log(tree.search(9));
+console.log(tree.search(222));
 // JSON.stringify(traverse(tree.root));
 // console.log(tree.lookup(20));
 //     9
