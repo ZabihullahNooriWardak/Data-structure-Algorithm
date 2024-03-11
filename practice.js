@@ -1,8 +1,12 @@
 function reverseString(str) {
-
+  let newStr = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    newStr += str[i];
+  }
+return newStr;
 }
 
-reverseString("yoyo master");
+console.log(reverseString("yoyo master"));
 
 function reverseStringRecursive(str) {
 
