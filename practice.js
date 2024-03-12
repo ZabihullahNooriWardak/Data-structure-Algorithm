@@ -1,5 +1,5 @@
 const numbers = [99, 44, 6, 2, 1, 5, 63, 87, 283, 4, 0];
-
+//this one is my own solution
 function selectionSort(array) {
   //Code Here
   let i = 0;
