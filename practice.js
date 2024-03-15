@@ -5,9 +5,14 @@ function insertionSort(array) {
 
     for (let i = 0; i < length; i++) {
         if (array[i] < array[0]) {
+            //nothing
             // Move number to the first position
+            //some work 
+            //some work
+            //jkfslj
             array.unshift(array.splice(i, 1)[0]);
         } else {
+            //
             // Find where number should go
             for (let j = 1; j < i; j++) {
                 if (array[i] > array[j - 1] && array[i] < array[j]) {
@@ -16,6 +21,7 @@ function insertionSort(array) {
                 }
             }
         }
+        //some change
     }
 
     return array;
