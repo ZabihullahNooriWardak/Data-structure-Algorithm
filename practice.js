@@ -10,7 +10,7 @@ function mergeSort(arr) {
 
     console.log("Splitting array into left and right halves:");
     console.log("Left:", left);
-    console.log("Right:", right);
+    console.log("Right:", right);   
 
     const sortedLeft = mergeSort(left);
     const sortedRight = mergeSort(right);
