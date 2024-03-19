@@ -17,3 +17,6 @@ return [...quickSort(arrRight),pivot,...quickSort(arrLeft)];
 }
 let myArray=[99,3,22,42,4,9,111,22];
 console.log(quickSort(myArray));
+
+
+
