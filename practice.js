@@ -6,7 +6,7 @@ function binarySearch(arr, target) {
   
   while (left <= right) {
     let mid = Math.floor((left + right) / 2);
-    
+    // one commit at a time today it was all concepts about dsa
     // Check if the target is present at mid
     if (arr[mid] === target) {
       return mid;
