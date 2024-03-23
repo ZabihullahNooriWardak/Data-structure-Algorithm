@@ -10,6 +10,6 @@
 //DFS
 
 //Determining whether a path exists between two nodes:
-
-
+//DFS
 //Finding the shortest path:
+//bfs
