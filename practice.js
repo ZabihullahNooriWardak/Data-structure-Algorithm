@@ -1,21 +1,22 @@
 var rob = function(nums) {
-  let oddTotal=0;
-  let evenTotal=0;
-    for(let i=0;i<nums.length;i++){
-      if(i%2===0){
-        evenTotal+=nums[i];
-       }else{
-        oddTotal+=nums[i];
-       }
+  let max = nums[0];
+  let indexOfMax=0;
+  let totalRob=0;
+while(nums.length){
+  for(let i=0;i<nums.length;i++){
+    if(nums[i]>max){
+     max=nums[i];
+     indexOfMax=i;
     }
-    if(oddTotal>=evenTotal){
-      return oddTotal;
-    }
-    return evenTotal;
+    totalRob+=max;
+   if(indexOfMax>0){
+     nums.splice(indexOfMax-1,3)
+   }else{
+     nums.splice(indexOfMax,2)
+   }
+  }
+}
+return totalRob;
 };
 
-//[3,2,5,2,2,9,7,6,9,3]
-
-
-
-
+console.log(rob([2,1,1,2]));
