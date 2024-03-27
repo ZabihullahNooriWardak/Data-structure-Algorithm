@@ -13,3 +13,9 @@ var rob = function(nums) {
     }
     return evenTotal;
 };
+
+//[3,2,5,2,2,9,7,6,9,3]
+
+
+
+
