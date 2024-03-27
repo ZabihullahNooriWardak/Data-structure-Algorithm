@@ -1,6 +1,6 @@
 var rob = function(nums) {
   let totalRob=0;
-  //[1,2,3,1]
+  let referenceToOriginalArray=nums.slice();
 while(nums.length){
   let max = nums[0];
   let indexOfMax=0;
@@ -17,7 +17,22 @@ while(nums.length){
      nums.splice(indexOfMax,2)
    }
 }
-return totalRob;
+let oddTotal=0;
+  let evenTotal=0;
+    for(let i=0;i<referenceToOriginalArray.length;i++){
+      if(i%2===0){
+        evenTotal+=referenceToOriginalArray[i];
+       }else{
+        oddTotal+=referenceToOriginalArray[i];
+       }
+    }
+    if(oddTotal>evenTotal && oddTotal>totalRob){  
+      return oddTotal;
+    }else if(evenTotal>oddTotal && evenTotal>totalRob){
+    return evenTotal;
+    }else{
+      return totalRob
+    }
 };
 
-console.log(rob([1,2,3,1]));
+console.log(rob([2,7,9,3,1]));
