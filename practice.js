@@ -1,9 +1,11 @@
 //2,3,8,9,2,33,1
 var rob = function(nums) {
+    //memoization array
   let db=new Array(nums.length);
   db[0]=nums[0];
   db[1]=Math.max(nums[0],nums[1]);
   for(let i=2;i<nums.length;i++){
+    //core logic of the function
     db[i]=Math.max(db[i-2]+nums[i],db[i-1]);
   }
   return db[db.length-1];
