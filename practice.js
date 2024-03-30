@@ -8,6 +8,7 @@ var rob = function(nums) {
     //core logic of the function
     db[i]=Math.max(db[i-2]+nums[i],db[i-1]);
   }
+  //
   return db[db.length-1];
 };
 console.log(rob([2,0,1,2]))
