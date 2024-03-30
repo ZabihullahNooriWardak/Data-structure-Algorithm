@@ -3,7 +3,7 @@ var rob = function(nums) {
     //memoization array
   let db=new Array(nums.length);
   db[0]=nums[0];
-  //
+  //e
   db[1]=Math.max(nums[0],nums[1]);
   for(let i=2;i<nums.length;i++){
     //core logic of the function
