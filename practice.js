@@ -1,7 +1,14 @@
 //js practice 
-let myObj = {name:"ali",age:32};
-let {name,age} = myObj;
-function myFunction(first,second){
-  console.log(first,second);
-}
-myFunction(name,age)
+
+// one way of adding event listener
+var button = document.getElementById("myButton");
+button.onclick = function() {
+  alert("Button clicked!");
+};
+//another way
+var button = document.getElementById("myButton");
+button.addEventListener("click", function() {
+  alert("Button clicked!");
+});
+// inline way 
+<button onclick="handleClick()">Click Me</button>
