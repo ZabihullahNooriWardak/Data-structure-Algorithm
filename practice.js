@@ -1,5 +1,4 @@
-// js practice
-
+//js practice 
 let myObj = {name:"ali",age:32};
 let {name,age} = myObj;
 function myFunction(first,second){
